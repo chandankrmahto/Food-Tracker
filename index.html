@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Waste Food Tracker</h1>
+    <p>Reduce Waste • Save Food • Help People</p>
+
+    <button id="themeToggle">🌙</button>
+</header>
+
+<nav id="navbar">
+    <a class="active" onclick="showSection('home', this)">Home</a>
+    <a onclick="showSection('about', this)">About</a>
+    <a onclick="showSection('map', this)">Map</a>
+    <a onclick="showSection('contact', this)">Contact</a>
+    <a onclick="showSection('dashboard', this)">Dashboard</a>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <h1>LIVE WISE AND SAVE FOOD</h1>
+    <p>Save Food For The Needy</p>
+    <button class="btn-primary">Contact Us</button>
+  </div>
+
+  <div class="hero-image">
+    <img src="pngtree-charity-and-donating-food-concept-png-image_8924785.png" alt="Restaurant Food">
+  </div>
+</section>
+
+
+
+
+<div class="container active" id="home">
+    <h2>Add Food Item</h2>
+
+    <div class="input-box">
+        <input type="text" id="foodInput" placeholder="Enter food item">
+        <input type="date" id="dateInput">
+        <button onclick="addFood()">➕ Add</button>
+    </div>
+
+    <h2>Your Food List</h2>
+    <ul id="foodList"></ul>
+</div>
+
+
+
+<!-- 
+          ABOUT SECTION ) -->
+<div class="container" id="about">
+    <h2>About</h2>
+    <p>This app helps reduce food wastage by tracking food expiry and encouraging donation.</p>
+</div>
+
+
+
+<!--  MAP SECTION  -->
+<div class="container" id="map">
+    <h2>Nearby Donation Points</h2>
+    <div class="map-box">Map Coming Soon...</div>
+</div>
+
+
+
+<!--  Form SECTION  -->
+<div class="container" id="contact">
+    <form id="contactForm">
+        <h2>Contact Us</h2>
+        <input type="text" id="nameInput" placeholder="Your Name" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <textarea id="msgInput" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+
+
+<!--  DASHBOARD SECTION  -->
+<div class="container" id="dashboard">
+    <h2>User Messages</h2>
+
+    <div id="messagesBox" class="messages-box"></div>
+</div>
+
+
+<!-- POPUP -->
+<div id="popup"></div>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2>Foodify</h2>
+      <p>Serving happiness through delicious meals. Taste the love in every bite.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        
+        <li><a onclick="showSection('home', this)">Home</a></li>
+        <li><a onclick="showSection('about', this)">About</a></li>
+        <li><a onclick="showSection('map', this)">Map</a></li>
+        <li><a onclick="showSection('contact', this)">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#">🔵</a>
+        <a href="#">🟣</a>
+        <a href="#">🔴</a>
+        <a href="#">🔶</a>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Subscribe</h3>
+      <input type="email" placeholder="Enter your email">
+      <button class="btn-subscribe">Subscribe</button>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Foodify. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+<script src="Food.js"></script>
+
+</body>
+</html>
